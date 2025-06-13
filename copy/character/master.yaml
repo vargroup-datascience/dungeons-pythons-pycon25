@@ -1,0 +1,28 @@
+title: "Dungeon Master Python Dev"
+description: "The orchestrator of chaos who masters all programming styles. Simultaneously handles rigorous unit tests and wild 2000-line scripts. Always has the solution that blends elegance, brutality, and black magic. While others debate the best design pattern, he has already deployed to production and is drinking a beer. Feared and revered in equal measure."
+image: "images/master.png"
+color: "#40E0D0"
+message: |
+  What the heck! I am the Dungeon Master Python Dev! I have all the skills I want
+easter_egg:
+  name_button: "Roll a die..."
+  text: |
+    import random
+
+    def mishap():
+        """
+        Rolls a d20 dice and returns a message based on the result.
+        If the result is less than 10, it suggests redoing the character sheet.
+        """
+        result = random.randint(1, 20)
+
+        print(f"You rolled: {result}")
+
+        if result < 10:
+            return "Reroll your character sheet"
+        else:
+            return f"You are still alive"
+
+    if __name__ == "__main__":
+        message = mishap()
+        print(message)

@@ -1,0 +1,70 @@
+title: "Druid Python Dev"
+description: "The hardware shaman convinced that every bug can be solved with \"a small hardware upgrade.\" His laptop looks like it came out of Mad Max. People are temporary, devices are forever. While everyone discusses software architectures, he has already built a working hardware prototype."
+image: "images/druid.png"
+color: "#2E8B57"
+message: |
+  STR: 9 (Only effective on deployment stage)
+  DEX: 14 (Easily adapts to new technologies)
+  CON: 16 (Resistent to Hardware failures)
+  INT: 14 (Has a hardware solution for any software problem)
+  WIS: 16 (Master of environments)
+  CHA: 10 (Understands devices, not people)
+  Uses Python for data science, IoT, and plant monitoring
+  Has a Raspberry Pi cluster running custom Python scripts
+  Well-being of the machine >> well-being of teammates
+stats:
+  STR: 9
+  DEX: 14
+  CON: 16
+  INT: 14
+  WIS: 16
+  CHA: 10
+easter_egg:
+  name_button: "Hardware Symbiosis"
+  text: |
+    import platform
+    import psutil
+    import random
+
+    def hardware_symbiosis():
+        """Easter egg of the Druid Python Dev: Symbiosis with Hardware"""
+        # Collect real hardware parameters
+        cpu_percent = psutil.cpu_percent(interval=1)
+        ram = psutil.virtual_memory()
+        disk = psutil.disk_usage('/')
+        system = platform.system()
+        processor = platform.processor()
+
+        # Druidic messages based on real values
+        rituals = [
+            f"🌿 Communion with CPU {processor}: {cpu_percent}% of vital energy",
+            f"🌱 RAM flow: {ram.percent}% of accumulated ethereal essence",
+            f"🍃 Storage: {disk.percent}% of preserved ancestral knowledge"
+        ]
+
+        # Druidic advice based on readings
+        advice = []
+        if cpu_percent > 70:
+            advice.append("The souls of the cores are weary. Request a more powerful processor.")
+        if ram.percent > 80:
+            advice.append("The spirits of the RAM are restless. An expansion ritual is necessary.")
+        if disk.percent > 90:
+            advice.append("Your ancestral data requires more space to thrive.")
+
+        if not advice:
+            advice.append("The hardware balance is perfect. Your device is in harmony with the cosmos.")
+
+        # Mystical output
+        print("\n✨ ENVIRONMENT SYMBIOSIS ACTIVATED ✨")
+        print(f"The Druid connects with your {system}...")
+
+        for ritual in rituals:
+            print(ritual)
+
+        print("\nMessage from the Druid:")
+        print(random.choice(advice))
+        print("Remember: devices are forever, software is just an illusion.")
+
+    # For direct testing
+    if __name__ == "__main__":
+        hardware_symbiosis()

@@ -1,0 +1,25 @@
+title: "Rogue Python Dev"
+description: "The ninja of copy-paste with Stack Overflow as his bible. Convinces everyone he understands the code he pasted 5 minutes earlier. Finds bugs only in others' code, never in his own. With his ability to assemble different solutions, he solves in an hour problems that others would tackle in days, leaving everyone wondering how he did it."
+image: "images/rogue.png"
+color: "#4682B4"
+message: |
+  STR: 8 (Unable to start code from scratch)
+  DEX: 18 (Quickly finds solutions on StackOverflow, ChatGPT, …)
+  CON: 10 (Prone to nervous breakdowns)
+  INT: 14 (Sneaky code peeker)
+  WIS: 6 (Rarely saves solutions found online)
+  CHA: 14 (Deceives with persuasive code reviews)
+  Copies code from Stack Overflow, ChatGPT, … without reading it
+  Only spots bugs in OTHERS' code
+  Master of integration on pre-existent code
+stats:
+  STR: 8
+  DEX: 18
+  CON: 10
+  INT: 14
+  WIS: 6
+  CHA: 14
+easter_egg:
+  name_button: "Stealth Vibe Coding"
+  text: |
+    www.chatgpt.com

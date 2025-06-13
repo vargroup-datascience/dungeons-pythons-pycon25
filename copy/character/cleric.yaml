@@ -1,0 +1,114 @@
+title: "Cleric Python Dev"
+description: "The priest of code purity obsessed with 100% test coverage. Writes docstrings longer than 'War and Peace' and worships PyLint. His PRs have more comments than code, but his projects never crash in production."
+image: "images/cleric.png"
+color: "#FFD700"
+message: |
+  STR: 10 (Devoted to their and only their sources)
+  DEX: 8 (Always lost in meta-code thinking)
+  CON: 14 (Regression resilient)
+  INT: 15 (Worship for tests out of control)
+  WIS: 18 (Foresees future problems)
+  CHA: 12 (Respected and avoided)
+  100% test coverage or it doesn't ship
+  Writes docstrings longer than the actual code
+  Keeps repositories clean
+stats:
+  STR: 10
+  DEX: 8
+  CON: 14
+  INT: 15
+  WIS: 18
+  CHA: 12
+easter_egg:
+  name_button: "Unit Test Shield"
+  text: |
+    import unittest
+
+    def sum(x, y):
+        """
+        Adds two numbers.
+    
+        Args:
+            x: First operand
+            y: Second operand
+    
+        Returns:
+            The sum of x and y.
+        """
+        return x + y
+    
+    class TestSumFunction(unittest.TestCase):
+        """Comprehensive test suite for the sum(x, y) function"""
+    
+        def test_sum_positive_integers(self):
+            """Tests the sum of positive integers."""
+            self.assertEqual(sum(1, 2), 3)
+            self.assertEqual(sum(5, 10), 15)
+            self.assertEqual(sum(100, 200), 300)
+    
+        def test_sum_negative_integers(self):
+            """Tests the sum of negative integers."""
+            self.assertEqual(sum(-1, -2), -3)
+            self.assertEqual(sum(-10, -5), -15)
+    
+        def test_sum_mixed_sign_integers(self):
+            """Tests the sum of integers with opposite signs."""
+            self.assertEqual(sum(10, -5), 5)
+            self.assertEqual(sum(-10, 5), -5)
+            self.assertEqual(sum(-10, 10), 0)
+    
+        def test_sum_zero_with_integer(self):
+            """Tests the identity property of addition."""
+            self.assertEqual(sum(0, 10), 10)
+            self.assertEqual(sum(10, 0), 10)
+            self.assertEqual(sum(0, 0), 0)
+    
+        def test_sum_float_with_integer(self):
+            """Tests the sum of a float and an integer."""
+            self.assertEqual(sum(1.5, 2), 3.5)
+            self.assertEqual(sum(3, 2.5), 5.5)
+    
+        def test_sum_two_floats(self):
+            """Tests the sum of two floats."""
+            self.assertAlmostEqual(sum(1.1, 2.2), 3.3, places=10)
+            self.assertAlmostEqual(sum(0.1, 0.2), 0.3, places=10)
+    
+        def test_sum_negative_floats(self):
+            """Tests the sum of negative floats."""
+            self.assertAlmostEqual(sum(-1.5, -2.5), -4.0)
+    
+        def test_sum_large_integers_no_overflow(self):
+            """Ensures large integer sums do not cause overflow errors."""
+            self.assertEqual(sum(10**10, 10**10), 2 * 10**10)
+    
+        def test_sum_string_raises_typeerror(self):
+            """Ensures summing strings raises TypeError."""
+            with self.assertRaises(TypeError):
+                sum("1", 2)
+            with self.assertRaises(TypeError):
+                sum(1, "2")
+    
+        def test_sum_none_raises_typeerror(self):
+            """Ensures summing None raises TypeError."""
+            with self.assertRaises(TypeError):
+                sum(None, 2)
+            with self.assertRaises(TypeError):
+                sum(1, None)
+    
+        def test_sum_boolean_typecast(self):
+            """Tests behavior with boolean values."""
+            self.assertEqual(sum(True, False), 1)
+            self.assertEqual(sum(True, True), 2)
+    
+        def test_sum_commutative_property(self):
+            """Tests the commutative property of addition."""
+            self.assertEqual(sum(5, 10), sum(10, 5))
+            self.assertEqual(sum(-3, 7), sum(7, -3))
+    
+        def test_documentation_exists(self):
+            """Ensures the function has a docstring."""
+            self.assertIsNotNone(sum.__doc__)
+            self.assertGreater(len(sum.__doc__), 10)
+    
+    if __name__ == "__main__":
+        unittest.main()

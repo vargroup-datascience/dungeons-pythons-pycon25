@@ -1,0 +1,80 @@
+- text: "How do you debug a solution?"
+  options:
+    - ["I check if the problem is hardware, then isolate environmental variables", "druid"]
+    - ["I write a decorator that tracks every function call and variable", "wizard"]
+    - ["I insert print() everywhere until I find the problem", "barbarian"]
+    - ["I review the code from the beginning, removing unnecessary complexity", "monk"]
+    - ["I search for the error on Stack Overflow and apply the solutions found", "rogue"]
+    - ["I write a test that reproduces the bug and use structured debugging tools", "cleric"]
+
+- text: "What is your approach to code documentation?"
+  options:
+    - ["Few but meaningful comments, code readable like prose", "monk"]
+    - ["I copy documentation from similar projects and adapt it quickly", "rogue"]
+    - ["Detailed docstrings, Sphinx, ReadTheDocs, and complete comments", "cleric"]
+    - ["The code documents itself, at most a few comments", "barbarian"]
+    - ["I create an automatic documentation generation system", "wizard"]
+    - ["Wiki with screenshots, interactive diagrams, and hardware use cases", "druid"]
+
+- text: "How do you organize a new Python project?"
+  options:
+    - ["Everything in main.py, why complicate life?", "barbarian"]
+    - ["Small, focused modules with single and well-defined responsibilities", "monk"]
+    - ["Standard structure with separate tests, CI/CD, and complete documentation", "cleric"]
+    - ["Multiple interconnected repositories with APIs and configurations for each environment", "druid"]
+    - ["I copy the structure from a similar project or an online template", "rogue"]
+    - ["I create a complex package system with namespaces and metaprogramming", "wizard"]
+
+- text: "How do you approach a hotfix in production?"
+  options:
+    - ["I isolate the bug, write a test, develop the fix, test, and release", "cleric"]
+    - ["I calmly analyze the root cause before intervening", "monk"]
+    - ["I develop an advanced monitoring system to analyze the error", "wizard"]
+    - ["I look for a patch online and apply it as quickly as possible", "rogue"]
+    - ["I implement an automatic failover system while solving the issue", "druid"]
+    - ["I directly modify the file in production and restart", "barbarian"]
+
+- text: "What is your approach to performance optimization?"
+  options:
+    - ["I develop custom C extensions and advanced algorithmic optimizations", "wizard"]
+    - ["I simplify the algorithm to its most essential and efficient form", "monk"]
+    - ["I distribute the load across multiple devices and optimize for hardware", "druid"]
+    - ["I add more CPU and RAM until it runs fast", "barbarian"]
+    - ["I methodically profile the code, identify, and resolve bottlenecks", "cleric"]
+    - ["I look for optimization tricks online and apply them to the code", "rogue"]
+
+- text: "What is your approach to testing?"
+  options:
+    - ["Strict TDD with 100% coverage and integration tests", "cleric"]
+    - ["I wrote a custom testing framework with meta-assertions", "wizard"]
+    - ["If it works on the first try, no tests are needed", "barbarian"]
+    - ["Automated tests in real environments with different hardware", "druid"]
+    - ["Simple but effective tests that cover essential cases", "monk"]
+    - ["I copy some tests from a similar project and adapt them", "rogue"]
+
+- text: "How do you manage team collaboration?"
+  options:
+    - ["I develop custom tools to automate collaboration", "wizard"]
+    - ["I build monitoring systems and dashboards for the team", "druid"]
+    - ["I adapt to the team's style and go with the flow", "rogue"]
+    - ["I prefer to work alone, teams slow down the work", "barbarian"]
+    - ["I promote constructive discussions and shared simple solutions", "monk"]
+    - ["I establish guidelines, code reviews, and quality standards", "cleric"]
+
+- text: "When you need to iterate over a list, you prefer:"
+  options:
+    - ["An elegant and readable list comprehension", "monk"]
+    - ["A generator that also works on streaming and distributed data", "druid"]
+    - ["A map() with complex lambdas and advanced functions", "wizard"]
+    - ["A well-documented for loop with exception handling", "cleric"]
+    - ["A good old for loop with indices", "barbarian"]
+    - ["Any snippet I found online last time", "rogue"]
+
+- text: "How do you approach learning new technologies?"
+  options:
+    - ["I experiment with practical projects that combine hardware and software", "druid"]
+    - ["I focus on fundamental principles that stand the test of time", "monk"]
+    - ["I follow structured courses and write tests while learning", "cleric"]
+    - ["I follow popular trends online and learn the parts I need", "rogue"]
+    - ["I stick to what I already know, why change?", "barbarian"]
+    - ["I study theoretical details and implement custom versions", "wizard"]

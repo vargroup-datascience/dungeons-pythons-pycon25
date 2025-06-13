@@ -1,0 +1,51 @@
+title: "Wizard Python Dev"
+description: "The wizard of incomprehensible solutions who turns simple loops into complex metaclasses. His code is so advanced that even he doesn't understand it after six months. However, when it comes to solving that impossible problem that has been blocking the team for weeks, he is the one who arrives with the brilliant approach no one would have imagined."
+image: "images/wizard.png"
+color: "#9370DB"
+message: |
+  STR: 7 ("Hello World" is their Kryptonite)
+  DEX: 10 (Fast coding, never releasing)
+  CON: 9 (Simple problems require complex solutions)
+  INT: 20 (Python-pedia master)
+  WIS: 16 (Overthinks elegant solutions)
+  CHA: 8 (Keep them away from non-wizard stakeholders)
+  Writes metaclasses and decorators for EVERYTHING
+  Refuses to work on messy code scripts
+  Knows the entire standard library by heart
+stats:
+  STR: 7
+  DEX: 10
+  CON: 9
+  INT: 20
+  WIS: 16
+  CHA: 8
+easter_egg:
+  name_button: "Metaclass Spell"
+  text: |
+    # Wizard-style code - Do not use in production!
+    class MetaLogger(type):
+        def __new__(mcs, name, bases, namespace):
+            for key, value in namespace.items():
+                if callable(value) and not key.startswith('__'):
+                    namespace[key] = mcs.log_decorator(value)
+            return super().__new__(mcs, name, bases, namespace)
+        
+        @staticmethod
+        def log_decorator(func):
+            def wrapper(*args, **kwargs):
+                print(f"⚡ Magical invocation of {func.__name__} with {args} and {kwargs} ⚡")
+                result = func(*args, **kwargs)
+                print(f"✨ {func.__name__} produced {result} ✨")
+                return result
+            return wrapper
+
+    class NumericCaster(metaclass=MetaLogger):
+        def divide(self, a, b):
+            return a / b
+        
+        def multiply(self, a, b):
+            return a * b
+
+    # Using the spell
+    wizard = NumericCaster()
+    result = wizard.multiply(7, 6)  # Witness the magic!

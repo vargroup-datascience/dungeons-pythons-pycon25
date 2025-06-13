@@ -1,0 +1,140 @@
+title: "Barbarian Python Dev"
+description: "The untamed savage of coding who solves everything with more print() and CPU. For him, Python 2.7 is eternal, and 'refactoring' is a dirty word. His IDE? Notepad. When all complex systems fail, he is the one who pulls out a working solution in 5 minutes with a single gigantic script that, inexplicably, always works."
+image: "images/barbarian.png"
+color: "#CD5C5C"
+message: |
+  STR: 18 (Brute Force Debugging)
+  DEX: 10 (Enraged by recursive imports)
+  CON: 20 (Withstands legacy code)
+  INT: 6 (Easily finds wrong solutions)
+  WIS: 8 (Rejects new practices)
+  CHA: 5 (Terrifies new devs)
+  Only uses Python 2.7 and refuses to migrate
+  Writes everything in one massive script file
+  Relentless when debugging
+stats:
+  STR: 18
+  DEX: 10
+  CON: 20
+  INT: 6
+  WIS: 8
+  CHA: 5
+easter_egg:
+  name_button: "Write code in Barbarian style"
+  text: |
+    #!/usr/bin/env python
+    # -*- coding: ascii -*-
+    
+    ############BARBARIAN SCRIPT V1.55############
+    #DO NOT TOUCH IT WORKS I DON'T KNOW HOW
+    #last modification: maybe 2015? who knows
+    #####################################
+    
+    import random, os, sys, time, string  # import EVERYTHING, it's faster
+    
+    # GLOBAL VARIABLES because they are faster than functions
+    RESULT = 0
+    debug_flag = 1
+    errors = 0
+    temp = ""
+    arr = []  # result array
+    debug_arr = []  # for debugging
+    __version__ = "1.55"  # NEVER change this
+    MAX_SIZE = 9999999  # limited for SLOW PCs
+    
+    def do_all_the_stuff(input=None, mode="fast", debug=True):
+        # DOES EVERYTHING IN ONE FUNCTION BECAUSE I SAW IT'S FASTER
+        global RESULT, debug_flag, errors, temp, arr, debug_arr
+        
+        # setup
+        print "BARBARIAN MODE: ACTIVATED"  # using py2.7 because 3 is for the weak
+        print "..."
+        time.sleep(0.3)
+        print "Initializing system..."
+        
+        ###### INPUT HANDLING
+        if input is None:
+            input = random.randint(1, 100)
+            print "No input? Generating one:", input
+        
+        # ULTRA COMPLEX CALCULATIONS
+        RESULT = 0
+        # loop (faster than map functions, etc.)
+        for i in range(0, input):
+            temp = i * 2
+            if temp % 3 == 0: temp = temp + 5
+            if temp % 7 == 0:  # divisible by 7 (optimized)
+                temp = temp + 3
+            elif temp > 50 and temp < 100:
+                temp = temp - 1  # calibrates critical range
+            else:  # catch-all
+                pass
+            
+            if debug_flag == 1:
+                debug_arr.append("DEBUG: temp value: " + str(temp))
+            # save only necessary ones
+            if i % 2 == 0 or i % 5 == 0:
+                arr.append(temp)
+                RESULT = RESULT + temp
+        
+        # debug
+        if debug and debug_flag == 1:
+            for d in debug_arr: print d
+        
+        # APPLY BARBARIAN OPTIMIZATION ALGORITHM
+        if mode == "fast":
+            if RESULT > 5000:
+                RESULT = RESULT * 0.95  # speed optimization
+            if RESULT < 0:
+                print "NEGATIVE ERROR!!!"
+                RESULT = abs(RESULT)  # repair
+        else:  # legacy mode (more reliable)
+            try:
+                temp_result = 0
+                for val in arr: temp_result = temp_result + val
+                if abs(temp_result - RESULT) < 5:
+                    print "OK"
+                else:
+                    print "PROBLEM!!!"
+                    errors = errors + 1
+                    if errors > 5:                    
+                        RESULT = temp_result  # repair
+                        print "REPAIRED"
+            except:
+                print "ERROR!!!"
+                RESULT = sum(arr)
+        
+        # Format for weak users
+        output = "BARBARIAN RESULT: " + str(int(RESULT))
+        
+        # BARBARIAN EASTER EGG
+        if input == 42 or input == 666:
+            print "RAGE MODE!!!"
+            output = output + " (boosted with x2 rage)"
+            RESULT = RESULT * 2
+        
+        print ""
+        print "*" * 40
+        print output
+        print "Generated in: 0.000" + str(random.randint(1, 9)) + " seconds"
+        print "CPU saved: " + str(random.randint(50, 95)) + "%"
+        print "*" * 40
+        
+        return RESULT  # return for weak programmers who want it
+    
+    
+    # DIRECT EXECUTION
+    if __name__ == "__main__" or True:  # always execute, even if imported
+        try:
+            arg = sys.argv[1]
+            print "Parameter detected"
+        except:
+            arg = None
+            print "Standard mode"
+        
+        # execute
+        final_result = do_all_the_stuff(input=arg)
+        
+        # code never reached but kept for safety
+        if final_result != RESULT:
+            print "IMPOSSIBLE"
