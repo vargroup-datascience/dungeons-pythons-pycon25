@@ -47,7 +47,7 @@ Follow these steps to get the app running on your machine.
 
 Add this enchanted repository to your spellbook. You can use either HTTPS or SSH.
 ```sh
-git clone git@bitbucket.org:analytics_network/dungeons_pythons.git
+git clone https://github.com/vargroup-datascience/dungeons-pythons-pycon25.git
 cd dungeons_pythons
 ```
 
